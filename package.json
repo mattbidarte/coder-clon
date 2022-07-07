@@ -1,0 +1,22 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "description": "Proyecto practico para Coder",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --include-path sass sass/index.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebatstian-coder/coder-clon.git"
+  },
+  "author": "Sebastián",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebatstian-coder/coder-clon/issues"
+  },
+  "homepage": "https://github.com/sebatstian-coder/coder-clon#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

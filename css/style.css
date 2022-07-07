@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #eee; }
+
+a {
+  text-decoration: none; }
+
+p {
+  line-height: 1.5; }
+
+ul {
+  list-style-type: none; }
+
+.container {
+  max-width: 1200px;
+  /* top, bottom - left, right  */
+  margin: 0 auto; }
+
+.header {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  padding: 30px 20px; }
+  .header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .header__content-title {
+      color: #22c55e; }
+      .header__content-title:hover::after {
+        content: 'inicio';
+        margin-left: 8px;
+        font-size: 15px;
+        color: #e2e8f0; }
+    .header__content-navbar {
+      display: flex;
+      align-items: center; }
+      .header__content-navbar li {
+        margin: 0 15px;
+        transition: transform 0.3s; }
+        .header__content-navbar li:last-child {
+          border: 1px solid #22c55e;
+          border-radius: 10px;
+          padding: 10px; }
+        .header__content-navbar li:active {
+          transform: scale(0.9); }
+        .header__content-navbar li a {
+          color: #e2e8f0;
+          font-weight: bold;
+          transition: color 0.3s; }
+          .header__content-navbar li a:hover {
+            color: #22c55e; }
