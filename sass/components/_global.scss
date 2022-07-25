@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #eee;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@mixin templateGrid($columns) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: 50px;
+}
+
+.templateButton {
+  display: inline-block;
+  color: $fontLight;
+  border-radius: $borderRadius;
+  cursor: pointer;
+  transition: $transition;
+  font-weight: bold;
+  font-size: 16px;
+}

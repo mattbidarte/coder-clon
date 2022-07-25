@@ -3,8 +3,9 @@
   color: $fontLight;
   padding: 30px 20px;
 
-  // .header__content
+  // reduce la posibilidad de conflictos en el CSS
   &__content {
+    @extend .container;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,24 +16,25 @@
       &:hover::after {
         content: 'inicio';
         margin-left: 8px;
-        font-size: 15px;
+        font-size: 14px;
         color: $fontLight;
       }
     }
 
-    // .header__content-navbar
+    // desktop
     &-navbar {
       display: flex;
       align-items: center;
 
       li {
         margin: 0 15px;
-        transition: transform 0.3s;
+        transition: $transition;
 
         &:last-child {
           border: 1px solid $primary;
-          border-radius: 10px;
+          border-radius: $borderRadius;
           padding: 10px;
+          margin-right: 0;
         }
 
         &:active {
@@ -42,7 +44,7 @@
         a {
           color: $fontLight;
           font-weight: bold;
-          transition: color 0.3s;
+          transition: $transition;
 
           &:hover {
             color: $primary;
@@ -50,5 +52,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: $bpMedium) {
+  .header__content-navbar {
+    display: none;
   }
 }

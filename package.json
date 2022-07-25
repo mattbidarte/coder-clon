@@ -1,7 +1,7 @@
 {
-  "name": "proyecto",
+  "name": "proyecto-coder-clon",
   "version": "1.0.0",
-  "description": "Proyecto practico para Coder",
+  "description": "Proyecto práctico para el curso de Desarrollo Web en Coderhouse.",
   "main": "index.js",
   "scripts": {
     "sass": "node-sass --include-path sass sass/index.scss css/style.css -w"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/sebatstian-coder/coder-clon.git"
   },
-  "author": "Sebastián",
+  "author": "Sebastián Sánchez",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sebatstian-coder/coder-clon/issues"

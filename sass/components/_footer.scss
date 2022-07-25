@@ -1,0 +1,71 @@
+.footer {
+  background-color: $bgDark;
+  color: $fontLight;
+  padding: 50px 20px;
+  margin-top: 50px;
+
+  &__content {
+    @include templateGrid(3);
+
+    h4 {
+      color: $primary;
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    &-list {
+      li {
+        margin: 10px 0;
+      }
+
+      a {
+        color: $fontLight;
+        transition: $transition;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  &__rrss {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+
+    // maps
+    $iconSocialMedia: (
+      github: $primary,
+      twitter: #55acee,
+      instagram: #c92d8f,
+      facebook: #2279e4,
+    );
+
+    // aplicar estilos utilizando maps
+    @each $socialMedia, $iconColor in $iconSocialMedia {
+      .rs-#{$socialMedia} {
+        color: $fontLight;
+        font-size: 30px;
+        transition: $transition;
+
+        &:hover {
+          color: $iconColor;
+        }
+      }
+    }
+  }
+
+  &__copy {
+    margin-top: 40px;
+    text-align: center;
+    color: #94a3b8;
+  }
+}
+
+@media (max-width: $bpSmall) {
+  .footer__content {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,138 @@
+.hero {
+  background-image: linear-gradient(45deg, #14532d, $primary);
+  padding: 50px 20px;
+  color: $fontLight;
+
+  &__grid {
+    @extend .container;
+    @include templateGrid(2);
+    align-items: center;
+
+    &-content {
+      h1 {
+        color: #fff;
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 40px;
+      }
+
+      a {
+        @extend .templateButton;
+        background-color: $bgDark;
+        padding: 15px 30px;
+
+        &:hover {
+          background-color: lighten($bgDark, 8%);
+          // background-color: darken();
+        }
+      }
+    }
+
+    &-video {
+      width: 100%;
+      border-radius: $borderRadius;
+      box-shadow: $shadow;
+      transition: $transition;
+
+      &:hover {
+        transform: rotate(5deg);
+      }
+    }
+  }
+}
+
+.courses {
+  margin-top: 50px;
+  padding: 0 20px;
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__grid {
+    @include templateGrid(3);
+
+    .card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: $borderRadius;
+      box-shadow: $shadow;
+      transition: $transition;
+
+      &:hover {
+        transform: translateY(-15px);
+      }
+
+      &__header {
+        position: relative;
+
+        img {
+          width: 100%;
+          border-radius: $borderRadius;
+          margin-bottom: 20px;
+        }
+
+        small {
+          background-color: rgba(255, 255, 255, 0.5);
+          color: #fff;
+          padding: 8px;
+          position: absolute;
+          right: 0;
+          border-bottom-left-radius: 10px;
+        }
+
+        &--strong {
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+
+      &__title {
+        margin-bottom: 20px;
+      }
+
+      &__description {
+        margin-bottom: 40px;
+      }
+
+      &__link {
+        @extend .templateButton;
+        background-color: $primary;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        position: relative;
+
+        &:hover {
+          background-color: darken($primary, 8%);
+
+          &::after {
+            content: '\276F';
+            position: absolute;
+            right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $bpLarge) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .courses__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: $bpSmall) {
+  .courses__grid {
+    grid-template-columns: 1fr;
+  }
+}
