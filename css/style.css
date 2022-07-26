@@ -16,11 +16,11 @@ p {
 ul {
   list-style-type: none; }
 
-.container, .header__content, .hero__grid {
+.container, .header__content, .hero__grid, .login {
   max-width: 1200px;
   margin: 0 auto; }
 
-.templateButton, .hero__grid-content a, .courses__grid .card__link {
+.templateButton, .hero__grid-content a, .courses__grid .card__link, .login__form button {
   display: inline-block;
   color: #e2e8f0;
   border-radius: 10px;
@@ -63,10 +63,33 @@ ul {
           transition: all 0.3s; }
           .header__content-navbar li a:hover {
             color: #22c55e; }
+    .header__content-navbar-mobile {
+      display: none; }
+      .header__content-navbar-mobile:hover > ul {
+        display: block; }
+      .header__content-navbar-mobile i {
+        font-size: 35px; }
+      .header__content-navbar-mobile ul {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 100px;
+        width: 100%;
+        background-color: #0f172a; }
+        .header__content-navbar-mobile ul li {
+          padding: 25px 0;
+          text-align: center; }
+          .header__content-navbar-mobile ul li a {
+            color: #fff;
+            font-weight: bold; }
+          .header__content-navbar-mobile ul li:nth-child(even) {
+            background-color: #131d35; }
 
 @media (max-width: 768px) {
   .header__content-navbar {
-    display: none; } }
+    display: none; }
+  .header__content-navbar-mobile {
+    display: block; } }
 
 .footer {
   background-color: #0f172a;
@@ -125,6 +148,17 @@ ul {
 @media (max-width: 576px) {
   .footer__content {
     grid-template-columns: 1fr; } }
+
+.whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  font-size: 40px;
+  background-color: #34b449;
+  border-radius: 50%;
+  padding: 7px 11px; }
+  .whatsapp a {
+    color: #fff; }
 
 .hero {
   background-image: linear-gradient(45deg, #14532d, #22c55e);
@@ -214,3 +248,46 @@ ul {
 @media (max-width: 576px) {
   .courses__grid {
     grid-template-columns: 1fr; } }
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 101px); }
+  .login__title {
+    margin-bottom: 20px; }
+  .login__form {
+    width: 40%;
+    padding: 0 20px; }
+    .login__form input {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      border: none;
+      outline: 2px solid transparent;
+      transition: all 0.3s; }
+      .login__form input:focus {
+        outline: 2px solid #0f172a; }
+    .login__form button {
+      width: 100%;
+      margin-top: 30px;
+      background-color: #0f172a;
+      padding: 15px;
+      border: none; }
+      .login__form button:hover {
+        background-color: #1a2748; }
+
+@media (max-width: 992px) {
+  .login__form {
+    width: 55%; } }
+
+@media (max-width: 768px) {
+  .login__form {
+    width: 65%; } }
+
+@media (max-width: 576px) {
+  .login__form {
+    width: 100%; } }

@@ -4,7 +4,7 @@
   "description": "Proyecto práctico para el curso de Desarrollo Web en Coderhouse.",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass --include-path sass sass/index.scss css/style.css -w"
+    "build-sass": "node-sass --include-path sass sass/index.scss css/style.css -w"
   },
   "repository": {
     "type": "git",

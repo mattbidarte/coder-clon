@@ -52,11 +52,53 @@
         }
       }
     }
+
+    // mobile
+    &-navbar-mobile {
+      display: none;
+
+      &:hover > ul {
+        display: block;
+      }
+
+      i {
+        font-size: 35px;
+      }
+
+      ul {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 100px;
+        width: 100%;
+        background-color: $bgDark;
+
+        li {
+          padding: 25px 0;
+          text-align: center;
+
+          a {
+            color: #fff;
+            font-weight: bold;
+          }
+
+          &:nth-child(even) {
+            background-color: lighten($bgDark, 3%);
+          }
+        }
+      }
+    }
   }
 }
 
 @media (max-width: $bpMedium) {
-  .header__content-navbar {
-    display: none;
+  .header__content {
+    &-navbar {
+      display: none;
+    }
+
+    &-navbar-mobile {
+      display: block;
+    }
   }
 }
